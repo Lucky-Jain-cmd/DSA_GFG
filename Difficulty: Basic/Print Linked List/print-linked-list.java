@@ -12,11 +12,12 @@ class Solution {
     public ArrayList<Integer> printList(Node head) {
         // code here
         ArrayList<Integer> al = new ArrayList<>();
-        Node temp = head;
-        while(temp!=null){
-            al.add(temp.data);
-            temp = temp.next;
-        }
+        helper(head,al);
         return al;
+    }
+    public void helper(Node head,ArrayList<Integer> al){
+        if(head==null) return;
+        al.add(head.data);
+        helper(head.next,al);
     }
 }
