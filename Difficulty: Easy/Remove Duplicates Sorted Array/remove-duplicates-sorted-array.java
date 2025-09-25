@@ -1,16 +1,15 @@
 class Solution {
-    // Function to remove duplicates from the given array
-    public int removeDuplicates(int[] arr) {
-        // Code Here
+    // Function to remove duplicates from the given array.
+    ArrayList<Integer> removeDuplicates(int[] arr) {
+        // code here
         TreeSet<Integer> hs = new TreeSet<>();
-        for(int i=0;i<arr.length;i++){
-            hs.add(arr[i]);
+        for(int i : arr){
+            hs.add(i);
         }
-        int i=0;
-        for(int num : hs){
-            arr[i] = num;
-            i++;
+        ArrayList<Integer> al = new ArrayList<>();
+        for(int i : hs){
+            al.add(i);
         }
-        return i;
+        return al;
     }
 }
